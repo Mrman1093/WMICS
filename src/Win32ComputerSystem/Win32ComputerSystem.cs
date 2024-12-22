@@ -1,0 +1,144 @@
+using System;
+using System.Text;
+using WMICS.PInvoke;
+using WMICS.Kernel32;
+
+namespace WMICS {
+    // https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-computersystem
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+    class Win32ComputerSystem {
+        public ushort AdminPasswordStatus;
+        public bool AutomaticManagedPagedfile;
+        public bool AutomaticResetBootOption;
+        public bool AutomaticResetCapability;
+        public int BootOptionOnLimit;
+        public int BootOptionOnWatchDog;
+        public bool BootROMSupported;
+        public string BootupState;
+        public int[] BootStatus;
+        public string Caption;
+        public int ChassisBootupState;
+        public string ChassisSKUNumber;
+        public string CreationClassName;
+        public short CurrentTimeZone;
+        public bool DaylightInEffect;
+        public string Description;
+        public string DNSHostName;
+        public string Domain;
+        public int DomainRole;
+        public bool EnableDaylightSavingsTime;
+        public int FrontPanelResetStatus;
+        public bool HypervisorPresent;
+        public bool InfraredSupported;
+        public string[] InitialLoadInfo;
+        public datetime InstallDate;
+        public int KeyboardPasswordStatus;
+        public string LastLoadInfo;
+        public string Manufacturer;
+        public string Model;
+        public string Name;
+        public string NameFormat;
+        public bool NetworkServerModeEnabled;
+        public uint NumberOfLogicalProcessors;
+        public uint NumberOfProcessors;
+        public byte[] OEMLogoBitmap;
+        public string[] OEMStringArray;
+        public bool PartOfDomain;
+        public long PauseAfterReset;
+        public int PCSystemType;
+        public int PCSystemTypeEx;
+        public int[] PowerManagementCapabilities;
+        public bool PowerManagementSupported;
+        public int PowerOnPasswordStatus;
+        public int PowerState;
+        public int PowerSupplyState;
+        public string PrimaryOwnerContact;
+        public string PrimaryOwnerName;
+        public int ResetCapability;
+        public short ResetCount;
+        public short ResetLimit;
+        public string[] Roles;
+        public string Status;
+        public string[] SupportContactDescription;
+        public string SystemFamily;
+        public string SystemSKUNumber;
+        public int SystemStartupDelay;
+        public string[] SystemStartupOptions;
+        public byte SystemStartupSetting;
+        public string SystemType;
+        public int ThermalState;
+        public ulong TotalPhysicalMemory;
+        public string UserName;
+        public int WakeUpType;
+        public string Workgroup;
+
+        //TODO: Identify the best way of returning an object
+        public extern Win32ComputerSystem New() {
+            this.AdminPasswordStatus = ;
+            this.AutomaticManagedPagedfile = ;
+            this.AutomaticResetBootOption = ;
+            this.AutomaticResetCapability = ;
+            this.BootOptionOnLimit = ;
+            this.BootOptionOnWatchDog = ;
+            this.BootROMSupported = ;
+            this.BootStatus = ;
+            this.BootupState = ;
+            this.Caption = ;
+            this.ChassisBootupState = ;
+            this.ChassisSKUNumber = ;
+            // This is a WMI/CIM specific property
+            this.CreationClassName = "Win32_ComputerSystem";
+            this.CurrentTimeZone = ;
+            this.DaylightInEffect = ;
+            this.Description = ;
+            this.DNSHostName = ;
+            this.Domain = ;
+            this.DomainRole = ;
+            this.EnableDaylightSavingsTime = ;
+            this.FrontPanelResetStatus = ;
+            this.HypervisorPresent = ;
+            this.InfraredSupported = ;
+            this.InitialLoadInfo = ;
+            this.KeyboardPasswordStatus = ;
+            this.LastLoadInfo = ;
+            this.Manufacturer = ;
+            this.Model = ;
+            this.Name = ;
+            this.NameFormat = ;
+            this.NetworkServerModeEnabled = ;
+            this.NumberOfLogicalProcessors = ;
+            this.NumberOfProcessors = ;
+            this.OEMLogoBitmap = ;
+            this.OEMStringArray = ;
+            this.PartOfDomain = ;
+            this.PauseAfterReset = ;
+            this.PCSystemType = ;
+            this.PCSystemTypeEx = ;
+            this.PowerManagementCapabilities = ;
+            this.PowerManagementSupported = ;
+            this.PowerOnPasswordStatus = ;
+            this.PowerState = ;
+            this.PowerSupplyState = ;
+            this.PrimaryOwnerContact = ;
+            this.PrimaryOwnerName = ;
+            this.ResetCapability = ;
+            this.ResetCount = ;
+            this.ResetLimit = ;
+            this.Roles = ;
+            this.Status = ;
+            this.SupportContactDescription = ;
+            this.SystemFamily = ;
+            this.SystemSKUNumber = ;
+            this.SystemStartupDelay = ;
+            this.SystemStartupOptions = ;
+            this.SystemStartupSetting = ;
+            this.SystemType = ;
+            this.ThermalState = ;
+            this.TotalPhysicalMemory = (GetMemoryStatus()).ullTotalPhys;
+            this.UserName = ;
+            this.WakeUpType = ;
+            this.Workgroup = ;
+        }
+
+    }
+}
